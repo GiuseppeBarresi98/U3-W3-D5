@@ -1,6 +1,6 @@
 input {
-  width: 70%;
-  margin-top: 30px;
+  width: 100%;
+  margin-top: 40px;
 
   margin: none;
 }
@@ -23,4 +23,8 @@ li {
   display: flex;
   justify-content: space-between;
   margin-top: 5px;
+}
+
+button {
+  margin: 0;
 }
