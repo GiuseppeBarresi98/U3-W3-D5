@@ -1,0 +1,19 @@
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+a {
+  padding: 10px;
+}
+
+li {
+  border: 1px solid grey;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #f7f3ac;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
