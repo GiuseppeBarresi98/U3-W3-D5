@@ -1,0 +1,26 @@
+<div class="container w-50">
+  <ul *ngIf="isConfirmed === false; else zeroElem">
+    <div *ngFor="let listitem of todos">
+      <li *ngIf="!listitem.completed">
+        {{ listitem.title }}
+
+        <a (click)="confirmed(listitem)"><i class="bi bi-patch-check"></i></a>
+        <a (click)="remove(listitem)"><i class="bi bi-trash3"></i></a>
+      </li>
+    </div>
+  </ul>
+  <ng-template #zeroElem>Non ci sono Task da fare!</ng-template>
+
+  <input
+    [(ngModel)]="inputvalue"
+    type="text"
+    placeholder="Inserisci le cose da fare"
+  />
+  <button
+    type="button"
+    (click)="addTask()"
+    class="btn btn-outline-success mx-4"
+  >
+    Invia
+  </button>
+</div>

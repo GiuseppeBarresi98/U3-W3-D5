@@ -1,0 +1,11 @@
+<div class="container w-50">
+  <ul>
+    <div *ngFor="let listitem of todos">
+      <li *ngIf="listitem.completed">
+        {{ listitem.title }}
+
+        <a (click)="remove(listitem)"><i class="bi bi-trash3"></i></a>
+      </li>
+    </div>
+  </ul>
+</div>
