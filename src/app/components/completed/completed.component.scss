@@ -10,10 +10,11 @@ a {
 
 li {
   border: 1px solid grey;
-  padding: 5px;
+  padding-inline: 5px;
   border-radius: 10px;
   background-color: #f7f3ac;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
 }

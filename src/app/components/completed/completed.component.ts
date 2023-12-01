@@ -11,13 +11,27 @@ export class CompletedComponent implements OnInit {
   inputvalue: string = '';
   todos: Interface[] = [];
   counter: number = 1;
+  message: boolean = false;
   constructor(private srv: ListItemService) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    await this.timeTwoSec();
+    this.message = true;
     this.todos = this.srv.getItem();
+    console.log('patate');
   }
-  remove(listitem: Interface): void {
+  async remove(listitem: Interface) {
+    await this.timeTwoSec();
     const indexofListitem = this.todos.indexOf(listitem);
     this.todos.splice(indexofListitem, 1);
+  }
+
+  timeTwoSec(): Promise<string> {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        const result = 'completato dopo due secondi';
+        resolve(result);
+      }, 2000);
+    });
   }
 }
